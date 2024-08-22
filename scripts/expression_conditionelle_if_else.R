@@ -36,7 +36,7 @@ if (b > a) {
 }
 
 # if imbriqué
-x <- 41
+x <- 13
 
 if (x > 10) {
   print("Sup a 10")

@@ -13,7 +13,7 @@
 # Example of functions in r
 seq(10, 100, 5)
 
-mean(c(100, 56, 34, 77, 98))
+mean(na.rm = T, x = c(100, 56, 34, 77, 98, NA))
 
 class(c(100, 56, 34, 77, 98))
 
@@ -46,7 +46,7 @@ afficher_nom <- function(nom){
 
 afficher_nom("Travaux Publique")
 
-nom_ecole_2 = afficher_nom("Travaux Publique")
+nom_ecole_2 <- afficher_nom("Travaux Publique")
 
 # passer plusieurs parametres
 
@@ -61,7 +61,7 @@ afficher_nom <- function(nom, prenom, age){
       "ans"
     )
   
-  phrase
+  return(phrase)
 }
 
 afficher_nom("Demeveng", "Derrick", 10)
@@ -69,6 +69,21 @@ afficher_nom("Demeveng", "Derrick", 10)
 
 # function de calcul de distance entre deux points
 
+#' Function to compute distance
+#'
+#' @param a first point
+#' @param b second point
+#'
+#' @return numeric
+#' @export
+#'
+#' @examples
+#' 
+#' pt1 <- c(70000, 430887)
+#' pt2 <- c(70342, 437380)
+#' dist(a = pt1, b = pt2)
+#' 
+#' 
 dist <- function(a, b){
   d = sqrt(((a[1]-b[1]))^2 + ((a[2]-b[2]))^2)
   return(d)
@@ -80,7 +95,7 @@ pt2 <- c(70342, 437380)
 
 dist(a = pt1, b = pt2)
 
-
+# Documenter le code
 
 # Exercises --------------------------------------------------------------------
 
