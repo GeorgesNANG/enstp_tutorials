@@ -151,7 +151,15 @@ for(b in 1:999){
     sommeB <- sommeB + valeurB
   }
 }
-somme <- sum(sommeA,sommeB)
+
+# # Calculer la somme des multiples de 3 et 5, moins ceux des multiples de 15 (communs)
+sommeC <- 0
+for(c in 1:999) {
+  if(c %% 15 == 0) {
+    sommeC <- sommeC + c
+  }
+}
+somme <- (sum(sommeA,sommeB)) - sommeC
 print(somme)
 
 
